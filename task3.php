@@ -43,10 +43,11 @@ $bestMovies = [
 <body>
 <h1<?=$red ? " class='red'" : "";?>>Заголовок</h1>
     <p><?=$content;?></p>
+    <p><?=count($bestMovies);?> лучших фильмов</p>
     <ul>
     <?php for ($i = 0; $i < count($bestMovies); $i++): ?>
-        <li><b><?=$bestMovies[$i]['movie'];?></b> - (<?=$bestMovies[$i]['year'];?>)</li>
+    <li><b><?=$bestMovies[$i]['movie'];?></b> - (<?=$bestMovies[$i]['year'];?>)</li>
     <?php endfor;?>
-    </ul>
+</ul>
 </body>
 </html>
