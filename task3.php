@@ -2,7 +2,7 @@
 
 $title   = 'Тестовое задание №3';
 $content = 'Это параграф с содержимым переменной $content';
-$red     = true;
+$red     = (bool) rand(0, 1);
 
 $bestMovies = [
     [
@@ -41,11 +41,7 @@ $bestMovies = [
     </style>
 </head>
 <body>
-<?php if ($red): ?>
-    <h1 class="red">Заголовок красного цвета</h1>
-<?php else: ?>
-    <h1>Заголовок</h1>
-<?php endif;?>
+<h1<?=$red ? " class='red'" : "";?>>Заголовок</h1>
     <p><?=$content;?></p>
     <ul>
     <?php for ($i = 0; $i < count($bestMovies); $i++): ?>
